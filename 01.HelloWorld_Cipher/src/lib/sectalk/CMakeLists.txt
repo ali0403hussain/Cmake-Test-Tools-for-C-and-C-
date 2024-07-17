@@ -1,0 +1,6 @@
+set(LIB_SEC_TALK_SRC SecureTalk.cpp)
+set(LIB_SEC_TALK_INC "../inc")
+add_library(${LIB_SEC_TALK} STATIC ${LIB_SEC_TALK_SRC})
+target_link_libraries(${LIB_SEC_TALK} ${LIB_USERACC})
+target_link_libraries(${LIB_SEC_TALK} ${LIB_CRYPTO})
+target_include_directories(${LIB_SEC_TALK} PUBLIC ${LIB_SEC_TALK_INC})

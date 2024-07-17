@@ -1,0 +1,6 @@
+set(APP_SRC main.cpp)
+set(APP_DIR_PATH "../lib/inc")
+add_executable(${EXE} ${APP_SRC})
+target_link_libraries(${EXE} ${LIB_SEC_TALK})
+target_include_directories(${EXE} PUBLIC ${APP_DIR_PATH})
+target_compile_options(${EXE} PRIVATE -Werror -Wall -Wextra)
